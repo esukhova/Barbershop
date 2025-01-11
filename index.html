@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Strong club Barbershop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=cd9beff9-999f-4968-94d0-9b9cb94c20b5&lang=ru_RU"
+            type="text/javascript">
+    </script>
+    <script src="js/libs/jquery.min.js"></script>
+</head>
+<body>
+<div class="discount-popup hidden">
+    <div class="discount-popup__inner">
+        <p>Просто запишитесь в наш барбершоп и приходите – скидку мы применим после осуществления услуги</p>
+        <button class="btn">Ок</button>
+    </div>
+</div>
+<header class="header">
+    <div class="header__container container">
+        <div class="header__logo logo">
+            <a href="#"><img src="./public/images/logo.png" alt="Логотип"></a>
+        </div>
+        <nav class="header__menu menu" id="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#price" class="menu__link">Услуги</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#price" class="menu__link">Цены</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#masters" class="menu__link">Барберы</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#about" class="menu__link">О нас</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger-container" id="burger-container">
+            <div class="burger"></div>
+        </div>
+        <div class="header__contact contact">
+            <a href="#" class="contact__link">
+                <img src="public/images/icons/phone.png" alt="phone"
+                     class="contact__icon"><span>+7 912 816-93-96</span></a>
+        </div>
+    </div>
+</header>
+<section class="main">
+    <div class="main__container container">
+        <div class="main__info">
+            <h1 class="main__title wow animate__bounce">Создайте деловой имидж, который достоин Вас!</h1>
+            <p class="main__subtitle">Мужские стрижки и бритье в центре Москвы</p>
+            <a class="main__btn btn" href="#masters">Записаться онлайн</a>
+        </div>
+        <div class="main__image">
+            <img class="main__img" src="./public/images/main_image.png" alt="Мужчина">
+        </div>
+    </div>
+</section>
+<section class="advantages">
+    <div class="advantages__container container">
+        <div class="advantages__wrapper">
+            <div class="advantages__item">
+                <div class="advantages__icon">
+                    <img src="./public/images/icons/center.png" alt="Центр Москвы">
+                </div>
+                <div class="advantages__text">
+                    Находимся в центре Москвы
+                </div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__icon">
+                    <img src="./public/images/icons/masters.png" alt="Лучшие мастера">
+                </div>
+                <div class="advantages__text">
+                    Лучшие мастера
+                </div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__icon">
+                    <img src="./public/images/icons/clients.png" alt="Довольные клиенты">
+                </div>
+                <div class="advantages__text">
+                    Довольные клиенты
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="about__container container">
+        <img src="./public/images/bg_beard.png" alt="Бородатый мужчина" class="about__img">
+        <h2 class="about__title title wow animate__fadeInDown">Strong Club – это намного больше,
+            чем просто мужская парикмахерская</h2>
+        <div class="about__wrapper">
+            <div class="about__image">
+                <img src="./public/images/barber.png" alt="Барбер за работой" class="about__image-img">
+            </div>
+            <div class="about__description wow animate__fadeInDown">
+                <p>Это место, где Вам помогут найти свой собственный, неповторимый стиль. Стоит довериться мастерам
+                    Strong Club один раз, и, поверьте, новый образ не оставит Вас равнодушным. Мужские стрижки и опасное
+                    бритье — это наш профиль, и мы уверены, что наши барберы делают это лучше всех.</p>
+                <p>У нас есть всё, что требуется настоящему мужчине: атмосфера брутальности и мужского духа,
+                    профессионализм барберов и сохранение европейских традиций барберинга,
+                    а также отличный кофе и хорошая компания.</p>
+                <p>Наши Барберы не только создадут уникальный внешний вид, но и поддержат разговор на любую тему!</p>
+            </div>
+        </div>
+        <div class="about__items wow animate__fadeInDown">
+            <div class="about__item">
+                <div class="about__icon">
+                    <img src="./public/images/icons/coffee.png" alt="Кофе">
+                </div>
+                <div class="about__text">
+                    Мы предложим вам чашечку кофе или чая
+                </div>
+            </div>
+            <div class="about__item">
+                <div class="about__icon">
+                    <img src="./public/images/icons/scissors.png" alt="Ножницы">
+                </div>
+                <div class="about__text">
+                    Мы пострижем и побреем вас по всем европейским традициям
+                </div>
+            </div>
+            <div class="about__item">
+                <div class="about__icon">
+                    <img class="about__icon-img" src="./public/images/icons/arrows.png" alt="Стрелки">
+                </div>
+                <div class="about__text">
+                    И скоро вы снова захотите вернуться в наш барбершоп
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="track" data-parallax="scroll" data-image-src="public/images/bg_parallax.jpg">
+    <div class="track__container container">
+        <div class="track__parallax parallax">
+            <div class="parallax__text">Следи за нами в <a href="#">Instagram</a>, чтобы быть в курсе всех акций!
+            </div>
+            <button class="parallax__btn btn">Подписаться</button>
+        </div>
+    </div>
+</section>
+<section class="price" id="price">
+    <div class="price__container container">
+        <h2 class="price__title title wow animate__fadeInDown">Прайс на наши услуги</h2>
+        <div class="price__list price-list wow animate__fadeInDown">
+            <div class="price-list__block">
+                <h3 class="price-list__title title-h3">Основные услуги</h3>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Стрижка мужская</p>
+                        <span class="price-list-item__price">1400</span>
+                    </div>
+                    <p class="price-list-item__desc">подбор стрижки, 2 мытья, укладка</p>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Стрижка удлиненная</p>
+                        <span class="price-list-item__price">2100</span>
+
+                    </div>
+                    <p class="price-list-item__desc">подбор стрижки, 2 мытья, укладка</p>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Стрижка машинкой</p>
+                        <span class="price-list-item__price">1400</span>
+                    </div>
+                    <p class="price-list-item__desc">без ножниц</p>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Стрижка детская</p>
+                        <span class="price-list-item__price">1100</span>
+                    </div>
+                    <p class="price-list-item__desc">от 4 до 14 лет включительно, не удлиненная</p>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Стрижка бороды</p>
+                        <span class="price-list-item__price">950</span>
+                    </div>
+                    <p class="price-list-item__desc">с распариванием и окантовкой бритвой шаветт</p>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Классическое бритьё</p>
+                        <span class="price-list-item__price">1400</span>
+                    </div>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Королевское бритьё</p>
+                        <span class="price-list-item__price">1850</span>
+                    </div>
+                </div>
+            </div>
+            <div class="price-list__block">
+                <h3 class="price-list__title">Комплексные услуги</h3>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Отец + сын</p>
+                        <span class="price-list-item__price">2200</span>
+                    </div>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Друг + друг</p>
+                        <span class="price-list-item__price">2500</span>
+                    </div>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Стрижка + бритьё</p>
+                        <span class="price-list-item__price">2200</span>
+                    </div>
+                </div>
+            </div>
+            <div class="price-list__block">
+                <h3 class="price-list__title">Дополнительные услуги</h3>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Укладка волос</p>
+                        <span class="price-list-item__price">300</span>
+                    </div>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Коррекция воском</p>
+                        <span class="price-list-item__price">450</span>
+                    </div>
+                    <p class="price-list-item__desc">удаление нежелательных волос на лице</p>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Камуфляж седины</p>
+                        <span class="price-list-item__price">1100</span>
+                    </div>
+                    <p class="price-list-item__desc">предварительная консультация с мастером</p>
+                </div>
+                <div class="price-list__item price-list-item">
+                    <div class="price-list-item__main">
+                        <p class="price-list-item__title">Бритьё головы</p>
+                        <span class="price-list-item__price">1250</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="discount" data-parallax="scroll" data-image-src="public/images/bg_parallax.jpg">
+    <div class="discount__container container">
+        <div class="discount__parallax parallax">
+            <div class="parallax__text">Вы у нас первый раз? Получите <a href="#">скидку 15%</a>
+            </div>
+            <button class="parallax__btn btn">Получить скидку</button>
+        </div>
+    </div>
+</section>
+<section class="masters" id="masters">
+    <div class="masters__container container">
+        <h2 class="masters__title title wow animate__fadeInDown">Наши мастера</h2>
+        <p class="masters__subtitle subtitle wow animate__fadeInDown">Вот они, простые герои, несущие в мир стиль и
+            безупречный внешний вид.
+            Команда Barber Club каждый день трудится над тем, чтобы создавать и поддерживать ваш индивидуальный стиль,
+            подчеркивать характер и превращать недостатки в достоинства.</p>
+        <div class="masters__changing-container">
+            <div class="multiple-items">
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master1.png" alt="Алексей">
+                            <div class="master__info">
+                                <p class="master__name">Алексей</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master2.png" alt="Марат">
+                            <div class="master__info">
+                                <p class="master__name">Марат</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master3.png" alt="Екатерина">
+                            <div class="master__info">
+                                <p class="master__name">Екатерина</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master1.png" alt="Алексей">
+                            <div class="master__info">
+                                <p class="master__name">Алексей</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master2.png" alt="Марат">
+                            <div class="master__info">
+                                <p class="master__name">Марат</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master3.png" alt="Екатерина">
+                            <div class="master__info">
+                                <p class="master__name">Екатерина</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master1.png" alt="Алексей">
+                            <div class="master__info">
+                                <p class="master__name">Алексей</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master2.png" alt="Марат">
+                            <div class="master__info">
+                                <p class="master__name">Марат</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="master">
+                    <div class="master__wrapper">
+                        <div class="master__image">
+                            <img src="public/images/master3.png" alt="Екатерина">
+                            <div class="master__info">
+                                <p class="master__name">Екатерина</p>
+                                <button class="master__btn btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="masters__form-container hidden">
+                <div class="masters__form-close">
+                   <div></div>
+                   <div></div>
+                </div>
+                <h2 class="title-h3">Заполните данные<br> для оформления заявки</h2>
+                <div id="message" class="hidden">Наш администратор свяжется с вами в течении 10 минут, для уточнения деталей.</div>
+                <form class="masters__form form" action="#" id="form">
+                    <div class="form__items">
+                        <div>
+                            <div class="form__item">
+                                <input id="name" class="form__input" type="text" placeholder="Ваше имя">
+                                <div class="error-input">Необходимо ввести имя</div>
+                            </div>
+                            <div class="form__item">
+                                <input id="phone" class="form__input" type="text" placeholder="Ваш телефон">
+                                <div class="error-input">Необходимо ввести номер телефона</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form__item">
+                                <select name="service" id="service">
+                                    <option disabled selected hidden>Выберите услугу</option>
+                                    <option value="male_haircut">Стрижка мужская</option>
+                                    <option value="longer_haircut">Стрижка удлиненная</option>
+                                    <option value="clipper_haircut">Стрижка машинкой</option>
+                                    <option value="children_haircut">Стрижка детская</option>
+                                    <option value="beard_cut">Стрижка бороды</option>
+                                    <option value="classic_shave">Классическое бритьё</option>
+                                    <option value="royal_shave">Королевское бритьё</option>
+                                    <option value="father_son">Отец + сын</option>
+                                    <option value="friend_friend">Друг + друг</option>
+                                    <option value="haircut_shave">Стрижка + бритьё</option>
+                                    <option value="hair_styling">Укладка волос</option>
+                                    <option value="waxing">Коррекция воском</option>
+                                    <option value="camouflage">Камуфляж седины</option>
+                                    <option value="head_shave">Бритьё головы</option>
+                                </select>
+                                <div class="error-input">Необходимо выбрать услугу</div>
+                            </div>
+                            <div class="form__item">
+                                <select name="master" id="master">
+                                    <option disabled selected hidden>Выберите мастера</option>
+                                    <option>Алексей</option>
+                                    <option>Марат</option>
+                                    <option>Екатерина</option>
+                                    <option>Алексей</option>
+                                    <option>Марат</option>
+                                    <option>Екатерина</option>
+                                    <option>Алексей</option>
+                                    <option>Марат</option>
+                                    <option>Екатерина</option>
+                                </select>
+                                <div class="error-input">Необходимо выбрать мастера</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form__item">
+                                <input class="form__input" type="text" id="datepicker" placeholder="Введите дату">
+                                <div class="error-input">Необходимо выбрать дату</div>
+                            </div>
+                            <div class="form__item">
+                                <select name="time" id="time">
+                                    <option disabled selected hidden>Выберите время</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                    <option>12:00</option>
+                                    <option>13:00</option>
+                                    <option>14:00</option>
+                                    <option>15:00</option>
+                                    <option>16:00</option>
+                                    <option>17:00</option>
+                                    <option>18:00</option>
+                                </select>
+                                <div class="error-input">Необходимо выбрать время</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="order__btn btn" id="submit">Оформить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__top">
+            <div class="footer__info wow animate__fadeInLeft">
+                <div class="footer__logo logo">
+                    <a href="#"><img src="./public/images/logo.png" alt="Логотип"></a>
+                </div>
+                <div class="footer__worktime">Время работы:<br>Пн-Вс 10:00-21:00</div>
+                <div class="footer__address">г. Москва, Москва Сити,<br>Башня «Деловой центр»</div>
+                <div class="footer__socials">
+                    <div class="footer__socials-text">
+                        Мы в социальных сетях:
+                    </div>
+                    <div class="footer__socials-items">
+                        <a href="#"><img src="./public/images/icons/vk.png" alt="Вконтакте"></a>
+                        <a href="#"><img src="./public/images/icons/ig.png" alt="Инстаграм"></a>
+                        <a href="#"><img src="./public/images/icons/fb.png" alt="Фейсбук"></a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__contacts-email">E-mail: info@barberclub.ru</div>
+                    <div class="footer__contacts-tel">+7 912 816-93-96</div>
+                </div>
+            </div>
+            <div class="footer__map">
+                <div id="map" style="width: 100%; height: 100%">
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span class="footer__rights">Все права защищены.</span>
+            <span class="footer__designer">Design by Karpuhin Vadim</span>
+        </div>
+    </div>
+</footer>
+<div class="loader hidden">
+    <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/wow.min.js"></script>
+<script src="js/libs/parallax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
